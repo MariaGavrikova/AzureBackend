@@ -28,9 +28,12 @@ namespace BackendService.Controllers
         /// </summary>
         /// <param name="id">Product ID.</param>
         /// <returns>Product information.</returns>
-        public string Get(int id)
+        public Product Get(int id)
         {
-            return "value";
+            var service = new ProductService();
+            var product = service.GetProduct(id);
+
+            return product;
         }
 
         /// <summary>
@@ -39,6 +42,8 @@ namespace BackendService.Controllers
         /// <param name="value">Product information.</param>
         public void Post([FromBody]string value)
         {
+            var service = new ProductService();
+            service.CreateProduct(value);
         }
 
         /// <summary>
