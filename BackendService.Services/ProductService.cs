@@ -10,7 +10,8 @@ namespace BackendService.Services
 {
     public class ProductService
     {
-        private readonly DbModel.Entities _entities = new DbModel.Entities();
+        private readonly AdventureWorks.DbModel.Entities _entities =
+            new AdventureWorks.DbModel.Entities();
 
         public ProductService()
         {
@@ -19,11 +20,10 @@ namespace BackendService.Services
         public ICollection<Product> GetProducts()
         {
             var query = from d in _entities.Products
-                        select new Department
+                        select new BackendService.Services.Product
                         {
-                            Id = d.DepartmentID,
+                            ProductID = d.ProductID,
                             Name = d.Name,
-                            GroupName = d.GroupName
                         };
 
             return query.ToArray();

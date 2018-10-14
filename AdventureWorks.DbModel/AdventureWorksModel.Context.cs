@@ -54,6 +54,20 @@ namespace AdventureWorks.DbModel
         public virtual DbSet<vJobCandidateEmployment> vJobCandidateEmployments { get; set; }
         public virtual DbSet<vAdditionalContactInfo> vAdditionalContactInfoes { get; set; }
         public virtual DbSet<vStateProvinceCountryRegion> vStateProvinceCountryRegions { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<ProductCategory> ProductCategories { get; set; }
+        public virtual DbSet<ProductCostHistory> ProductCostHistories { get; set; }
+        public virtual DbSet<ProductDescription> ProductDescriptions { get; set; }
+        public virtual DbSet<ProductInventory> ProductInventories { get; set; }
+        public virtual DbSet<ProductListPriceHistory> ProductListPriceHistories { get; set; }
+        public virtual DbSet<ProductModel> ProductModels { get; set; }
+        public virtual DbSet<ProductModelIllustration> ProductModelIllustrations { get; set; }
+        public virtual DbSet<ProductModelProductDescriptionCulture> ProductModelProductDescriptionCultures { get; set; }
+        public virtual DbSet<ProductPhoto> ProductPhotoes { get; set; }
+        public virtual DbSet<ProductProductPhoto> ProductProductPhotoes { get; set; }
+        public virtual DbSet<ProductReview> ProductReviews { get; set; }
+        public virtual DbSet<ProductSubcategory> ProductSubcategories { get; set; }
+        public virtual DbSet<ProductDocument> ProductDocuments { get; set; }
     
         public virtual int uspUpdateEmployeeHireInfo(Nullable<int> businessEntityID, string jobTitle, Nullable<System.DateTime> hireDate, Nullable<System.DateTime> rateChangeDate, Nullable<decimal> rate, Nullable<byte> payFrequency, Nullable<bool> currentFlag)
         {

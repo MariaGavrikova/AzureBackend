@@ -15,7 +15,7 @@ namespace BackendService.Controllers
         /// Gets a product list.
         /// </summary>
         /// <returns>A list of available products.</returns>
-        public IEnumerable<string> Get()
+        public IEnumerable<Product> Get()
         {
             var service = new ProductService();
             var products = service.GetProducts();
