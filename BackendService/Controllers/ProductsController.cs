@@ -5,6 +5,8 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
+using BackendService.Services;
+
 namespace BackendService.Controllers
 {
     public class ProductsController : ApiController
@@ -15,7 +17,10 @@ namespace BackendService.Controllers
         /// <returns>A list of available products.</returns>
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            var service = new ProductService();
+            var products = service.GetProducts();
+
+            return products;
         }
 
         /// <summary>

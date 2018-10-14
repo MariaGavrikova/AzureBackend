@@ -1,0 +1,9 @@
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\bin\Debug\AdventureWorks.DbModel.dll.config
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\bin\Debug\AdventureWorks.DbModel.dll
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\bin\Debug\AdventureWorks.DbModel.pdb
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\bin\Debug\EntityFramework.dll
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\bin\Debug\EntityFramework.xml
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\obj\Debug\AdventureWorks.DbModel.dll
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\obj\Debug\AdventureWorks.DbModel.pdb

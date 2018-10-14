@@ -1,0 +1,10 @@
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\bin\Release\AdventureWorks.DbModel.dll.config
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\bin\Release\AdventureWorks.DbModel.dll
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\bin\Release\AdventureWorks.DbModel.pdb
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\bin\Release\EntityFramework.dll
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\bin\Release\EntityFramework.SqlServer.dll
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\bin\Release\EntityFramework.xml
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\bin\Release\EntityFramework.SqlServer.xml
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\obj\Release\AdventureWorks.DbModel.csprojResolveAssemblyReference.cache
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\obj\Release\AdventureWorks.DbModel.dll
+D:\Work\Azure\adventure-forks-initial\adventure-forks\AdventureWorks.DbModel\obj\Release\AdventureWorks.DbModel.pdb
