@@ -23,7 +23,9 @@ namespace BackendService
             );
 
             config
-                .EnableSwagger(c => c.SingleApiVersion("v1", "A title for your API"))
+                .EnableSwagger(c => {
+                    c.SingleApiVersion("v1", "Module 2 Task 3 Backend Service");
+                })
                 .EnableSwaggerUi();
         }
     }

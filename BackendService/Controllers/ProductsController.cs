@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace BackendService.Controllers
 {
-    public class ValuesController : ApiController
+    public class ProductsController : ApiController
     {
         // GET api/values
         public IEnumerable<string> Get()
