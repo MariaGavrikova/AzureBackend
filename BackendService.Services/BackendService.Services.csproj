@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiException.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductCreateParameters.cs" />
     <Compile Include="ProductService.cs" />

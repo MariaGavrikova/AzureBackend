@@ -40,6 +40,7 @@ namespace BackendService.Controllers
         /// Creates a new product.
         /// </summary>
         /// <param name="parameters">New product information.</param>
+        /// <returns>Product information.</returns>
         public Product Post([FromBody]ProductCreateParameters parameters)
         {
             var service = new ProductService();
@@ -51,9 +52,11 @@ namespace BackendService.Controllers
         /// Updates an existing product.
         /// </summary>
         /// <param name="id">Product ID.</param>
-        /// <param name="value">Updated product information.</param>
-        public void Put(int id, [FromBody]string value)
+        /// <param name="parameters">Updated product information.</param>
+        public void Put(int id, [FromBody]ProductCreateParameters parameters)
         {
+            var service = new ProductService();
+            service.UpdateProduct(id, parameters.Name);
         }
 
         /// <summary>
@@ -62,6 +65,8 @@ namespace BackendService.Controllers
         /// <param name="id">Product ID.</param>
         public void Delete(int id)
         {
+            var service = new ProductService();
+            service.DeleteProduct(id);
         }
     }
 }
