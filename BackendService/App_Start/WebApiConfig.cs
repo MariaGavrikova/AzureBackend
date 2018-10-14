@@ -31,7 +31,7 @@ namespace BackendService
                     var commentsFile = Path.Combine(baseDirectory, commentsFileName);
 
                     c.SingleApiVersion("v1", commentsFile);
-                    c.IncludeXmlComments(commentsFile);
+                    //c.IncludeXmlComments(commentsFile);
                 })
                 .EnableSwaggerUi();
         }
