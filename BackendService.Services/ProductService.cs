@@ -16,11 +16,7 @@ namespace BackendService.Services
         public ICollection<Product> GetProducts()
         {
             var query = from d in _entities.Products
-                        select new BackendService.Services.Product
-                        {
-                            ProductID = d.ProductID,
-                            Name = d.Name,
-                        };
+                        select Map(d);
 
             return query.ToArray();
         }
@@ -33,23 +29,44 @@ namespace BackendService.Services
             Product result = null;
             if (queryResult != null)
             {
-                result = new BackendService.Services.Product
-                {
-                    ProductID = queryResult.ProductID,
-                    Name = queryResult.Name,
-                };
+                result = Map(queryResult);
             }
 
             return result;
         }
 
-        public void CreateProduct(string name)
+        public Product CreateProduct(string name)
         {
+            Product result = null;
+
             var queryResult = _entities.Products.Add(new AdventureWorks.DbModel.Product()
             {
-                Name = name
+                Name = name,
+                ProductNumber = Guid.NewGuid().GetHashCode().ToString(),
+                SellStartDate = DateTime.UtcNow.Date,
+                ModifiedDate = DateTime.UtcNow.Date,
+                SafetyStockLevel = 1,
+                ReorderPoint = 1
             });
             _entities.SaveChanges();
+
+            var product = _entities.Products
+                .FirstOrDefault(x => x.Name == name);
+            if (product != null)
+            {
+                result = Map(product);
+            }
+
+            return result;
+        }
+
+        private Product Map(AdventureWorks.DbModel.Product d)
+        {
+            return new BackendService.Services.Product
+            {
+                ProductID = d.ProductID,
+                Name = d.Name,
+            };
         }
     }
 }

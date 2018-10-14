@@ -39,11 +39,12 @@ namespace BackendService.Controllers
         /// <summary>
         /// Creates a new product.
         /// </summary>
-        /// <param name="value">Product information.</param>
-        public void Post([FromBody]string value)
+        /// <param name="parameters">New product information.</param>
+        public Product Post([FromBody]ProductCreateParameters parameters)
         {
             var service = new ProductService();
-            service.CreateProduct(value);
+            var newProduct = service.CreateProduct(parameters.Name);
+            return newProduct;
         }
 
         /// <summary>

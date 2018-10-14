@@ -31,7 +31,7 @@ namespace BackendService
                     var commentsFile = Path.Combine(baseDirectory, commentsFileName);
 
                     c.SingleApiVersion("v1", "Module 2 Task 3 Backend Service");
-                    //c.IncludeXmlComments(commentsFile);
+                    c.IncludeXmlComments(commentsFile);
                 })
                 .EnableSwaggerUi();
         }
