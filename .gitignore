@@ -6,3 +6,4 @@ obj
 packages
 .vs/BackendService/v15/.suo
 *.user
+BackendService/service.log
