@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
+using Swashbuckle.Application;
+
 namespace BackendService
 {
     public static class WebApiConfig
@@ -19,6 +21,10 @@ namespace BackendService
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config
+                .EnableSwagger(c => c.SingleApiVersion("v1", "A title for your API"))
+                .EnableSwaggerUi();
         }
     }
 }
