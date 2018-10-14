@@ -1,0 +1,13 @@
+D:\Work\Azure\AzureBackendApi\BackendService.Services\obj\Debug\BackendService.Services.csprojResolveAssemblyReference.cache
+D:\Work\Azure\AzureBackendApi\BackendService.Services\bin\Debug\BackendService.Services.dll.config
+D:\Work\Azure\AzureBackendApi\BackendService.Services\bin\Debug\BackendService.Services.dll
+D:\Work\Azure\AzureBackendApi\BackendService.Services\bin\Debug\BackendService.Services.pdb
+D:\Work\Azure\AzureBackendApi\BackendService.Services\bin\Debug\AdventureWorks.DbModel.dll
+D:\Work\Azure\AzureBackendApi\BackendService.Services\bin\Debug\EntityFramework.dll
+D:\Work\Azure\AzureBackendApi\BackendService.Services\bin\Debug\EntityFramework.SqlServer.dll
+D:\Work\Azure\AzureBackendApi\BackendService.Services\bin\Debug\AdventureWorks.DbModel.pdb
+D:\Work\Azure\AzureBackendApi\BackendService.Services\bin\Debug\AdventureWorks.DbModel.dll.config
+D:\Work\Azure\AzureBackendApi\BackendService.Services\bin\Debug\EntityFramework.xml
+D:\Work\Azure\AzureBackendApi\BackendService.Services\bin\Debug\EntityFramework.SqlServer.xml
+D:\Work\Azure\AzureBackendApi\BackendService.Services\obj\Debug\BackendService.Services.dll
+D:\Work\Azure\AzureBackendApi\BackendService.Services\obj\Debug\BackendService.Services.pdb

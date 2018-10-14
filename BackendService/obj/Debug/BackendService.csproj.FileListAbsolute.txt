@@ -1,3 +1,4 @@
+D:\Work\Azure\AzureBackendApi\BackendService\obj\Debug\BackendService.csprojResolveAssemblyReference.cache
 D:\Work\Azure\AzureBackendApi\BackendService\bin\ApplicationInsights.config
 D:\Work\Azure\AzureBackendApi\BackendService\bin\roslyn\csc.exe
 D:\Work\Azure\AzureBackendApi\BackendService\bin\roslyn\csc.exe.config
@@ -26,9 +27,13 @@ D:\Work\Azure\AzureBackendApi\BackendService\bin\roslyn\vbc.rsp
 D:\Work\Azure\AzureBackendApi\BackendService\bin\roslyn\VBCSCompiler.exe
 D:\Work\Azure\AzureBackendApi\BackendService\bin\roslyn\VBCSCompiler.exe.config
 D:\Work\Azure\AzureBackendApi\BackendService\bin\BackendService.dll.config
+D:\Work\Azure\AzureBackendApi\BackendService\bin\BackendService.xml
 D:\Work\Azure\AzureBackendApi\BackendService\bin\BackendService.dll
 D:\Work\Azure\AzureBackendApi\BackendService\bin\BackendService.pdb
 D:\Work\Azure\AzureBackendApi\BackendService\bin\Antlr3.Runtime.dll
+D:\Work\Azure\AzureBackendApi\BackendService\bin\BackendService.Services.dll
+D:\Work\Azure\AzureBackendApi\BackendService\bin\EntityFramework.dll
+D:\Work\Azure\AzureBackendApi\BackendService\bin\EntityFramework.SqlServer.dll
 D:\Work\Azure\AzureBackendApi\BackendService\bin\Microsoft.AI.Agent.Intercept.dll
 D:\Work\Azure\AzureBackendApi\BackendService\bin\Microsoft.AI.DependencyCollector.dll
 D:\Work\Azure\AzureBackendApi\BackendService\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -51,6 +56,11 @@ D:\Work\Azure\AzureBackendApi\BackendService\bin\System.Web.WebPages.Deployment.
 D:\Work\Azure\AzureBackendApi\BackendService\bin\System.Web.WebPages.dll
 D:\Work\Azure\AzureBackendApi\BackendService\bin\System.Web.WebPages.Razor.dll
 D:\Work\Azure\AzureBackendApi\BackendService\bin\WebGrease.dll
+D:\Work\Azure\AzureBackendApi\BackendService\bin\AdventureWorks.DbModel.dll
+D:\Work\Azure\AzureBackendApi\BackendService\bin\BackendService.Services.pdb
+D:\Work\Azure\AzureBackendApi\BackendService\bin\BackendService.Services.dll.config
+D:\Work\Azure\AzureBackendApi\BackendService\bin\EntityFramework.xml
+D:\Work\Azure\AzureBackendApi\BackendService\bin\EntityFramework.SqlServer.xml
 D:\Work\Azure\AzureBackendApi\BackendService\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\Work\Azure\AzureBackendApi\BackendService\bin\Newtonsoft.Json.xml
 D:\Work\Azure\AzureBackendApi\BackendService\bin\System.Net.Http.Formatting.xml
@@ -69,6 +79,7 @@ D:\Work\Azure\AzureBackendApi\BackendService\bin\Microsoft.AI.DependencyCollecto
 D:\Work\Azure\AzureBackendApi\BackendService\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\Work\Azure\AzureBackendApi\BackendService\bin\Microsoft.AI.WindowsServer.xml
 D:\Work\Azure\AzureBackendApi\BackendService\bin\Microsoft.AI.Web.xml
+D:\Work\Azure\AzureBackendApi\BackendService\bin\AdventureWorks.DbModel.pdb
+D:\Work\Azure\AzureBackendApi\BackendService\bin\AdventureWorks.DbModel.dll.config
 D:\Work\Azure\AzureBackendApi\BackendService\obj\Debug\BackendService.dll
 D:\Work\Azure\AzureBackendApi\BackendService\obj\Debug\BackendService.pdb
-D:\Work\Azure\AzureBackendApi\BackendService\bin\BackendService.xml
