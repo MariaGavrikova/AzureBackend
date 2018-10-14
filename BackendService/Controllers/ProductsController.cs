@@ -9,29 +9,46 @@ namespace BackendService.Controllers
 {
     public class ProductsController : ApiController
     {
-        // GET api/values
+        /// <summary>
+        /// Gets a product list.
+        /// </summary>
+        /// <returns>A list of available products.</returns>
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/values/5
+        /// <summary>
+        /// Gets product information.
+        /// </summary>
+        /// <param name="id">Product ID.</param>
+        /// <returns>Product information.</returns>
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/values
+        /// <summary>
+        /// Creates a new product.
+        /// </summary>
+        /// <param name="value">Product information.</param>
         public void Post([FromBody]string value)
         {
         }
 
-        // PUT api/values/5
+        /// <summary>
+        /// Updates an existing product.
+        /// </summary>
+        /// <param name="id">Product ID.</param>
+        /// <param name="value">Updated product information.</param>
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/values/5
+        /// <summary>
+        /// Deletes a product.
+        /// </summary>
+        /// <param name="id">Product ID.</param>
         public void Delete(int id)
         {
         }
