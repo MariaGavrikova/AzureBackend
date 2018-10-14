@@ -1,4 +1,3 @@
-D:\Work\Azure\AzureBackendApi\BackendService\obj\Debug\BackendService.csprojResolveAssemblyReference.cache
 D:\Work\Azure\AzureBackendApi\BackendService\bin\ApplicationInsights.config
 D:\Work\Azure\AzureBackendApi\BackendService\bin\roslyn\csc.exe
 D:\Work\Azure\AzureBackendApi\BackendService\bin\roslyn\csc.exe.config
@@ -72,3 +71,4 @@ D:\Work\Azure\AzureBackendApi\BackendService\bin\Microsoft.AI.WindowsServer.xml
 D:\Work\Azure\AzureBackendApi\BackendService\bin\Microsoft.AI.Web.xml
 D:\Work\Azure\AzureBackendApi\BackendService\obj\Debug\BackendService.dll
 D:\Work\Azure\AzureBackendApi\BackendService\obj\Debug\BackendService.pdb
+D:\Work\Azure\AzureBackendApi\BackendService\bin\BackendService.xml
