@@ -28,10 +28,10 @@ namespace BackendService
                 .EnableSwagger(c => {
                     var baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
                     var commentsFileName = Assembly.GetExecutingAssembly().GetName().Name + ".xml";
-                    var commentsFile = Path.Combine(baseDirectory, commentsFileName);
+                    var commentsFile = Path.Combine(baseDirectory, "bin\\", commentsFileName);
 
-                    c.SingleApiVersion("v1", commentsFile);
-                    //c.IncludeXmlComments(commentsFile);
+                    c.SingleApiVersion("v1", "Module 2 Task 3 Backend Service");
+                    c.IncludeXmlComments(commentsFile);
                 })
                 .EnableSwaggerUi();
         }
