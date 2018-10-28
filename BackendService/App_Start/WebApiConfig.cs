@@ -4,8 +4,10 @@ using System.Linq;
 using System.IO;
 using System.Reflection;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 using Swashbuckle.Application;
+using Swashbuckle.Swagger;
 
 namespace BackendService
 {
@@ -30,10 +32,11 @@ namespace BackendService
                     var commentsFileName = Assembly.GetExecutingAssembly().GetName().Name + ".xml";
                     var commentsFile = Path.Combine(baseDirectory, "bin\\", commentsFileName);
 
-                    c.SingleApiVersion("v1", "Module 2 Task 3 Backend Service");
+                    c.SingleApiVersion("v1", "Backend Service with Logging");
                     c.IncludeXmlComments(commentsFile);
+                    c.OperationFilter<FileUploadOperation>();
                 })
                 .EnableSwaggerUi();
         }
-    }
+    }    
 }

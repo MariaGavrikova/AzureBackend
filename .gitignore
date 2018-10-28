@@ -8,3 +8,4 @@ packages
 *.user
 BackendService/service.log
 .vs/BackendService/v15/.suo
+BackendService/App_Data/BodyPart_*
