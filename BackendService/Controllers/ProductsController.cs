@@ -19,16 +19,19 @@ namespace BackendService.Controllers
         /// <returns>A list of available products.</returns>
         public IEnumerable<Product> Get()
         {
+            ILog log = LogManager.GetLogger(typeof(ProductsController));
             try
             {
+                log.Info("Requested product list");
+
                 var service = new ProductService();
                 var products = service.GetProducts();
-
+                
                 return products;
             }
             catch (Exception ex)
             {
-                LogError(ex);
+                log.Error(ex);
                 throw;
             }
         }
@@ -40,6 +43,7 @@ namespace BackendService.Controllers
         /// <returns>Product information.</returns>
         public Product Get(int id)
         {
+            ILog log = LogManager.GetLogger(typeof(ProductsController));
             try
             {
                 var service = new ProductService();
@@ -49,7 +53,7 @@ namespace BackendService.Controllers
             }
             catch (Exception ex)
             {
-                LogError(ex);
+                log.Error(ex);
                 throw;
             }
         }
@@ -61,6 +65,7 @@ namespace BackendService.Controllers
         /// <returns>Product information.</returns>
         public Product Post([FromBody]ProductCreateParameters parameters)
         {
+            ILog log = LogManager.GetLogger(typeof(ProductsController));
             try
             {
                 var service = new ProductService();
@@ -69,7 +74,7 @@ namespace BackendService.Controllers
             }
             catch (Exception ex)
             {
-                LogError(ex);
+                log.Error(ex);
                 throw;
             }
         }
@@ -81,6 +86,7 @@ namespace BackendService.Controllers
         /// <param name="parameters">Updated product information.</param>
         public void Put(int id, [FromBody]ProductCreateParameters parameters)
         {
+            ILog log = LogManager.GetLogger(typeof(ProductsController));
             try
             {
                 var service = new ProductService();
@@ -88,7 +94,7 @@ namespace BackendService.Controllers
             }
             catch (Exception ex)
             {
-                LogError(ex);
+                log.Error(ex);
                 throw;
             }
         }
@@ -99,6 +105,7 @@ namespace BackendService.Controllers
         /// <param name="id">Product ID.</param>
         public void Delete(int id)
         {
+            ILog log = LogManager.GetLogger(typeof(ProductsController));
             try
             {
                 var service = new ProductService();
@@ -106,15 +113,9 @@ namespace BackendService.Controllers
             }
             catch (Exception ex)
             {
-                LogError(ex);
+                log.Error(ex);
                 throw;
             }
-        }
-
-        private void LogError(Exception ex)
-        {
-            ILog log = LogManager.GetLogger(typeof(ProductsController));
-            log.Error(ex);
         }
     }
 }
