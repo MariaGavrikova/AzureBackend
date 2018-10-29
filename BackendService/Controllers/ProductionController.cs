@@ -28,6 +28,8 @@ namespace BackendService.Controllers
             ILog log = LogManager.GetLogger(typeof(ProductionController));
             try
             {
+                log.Info("Uploading file to production");
+
                 if (!Request.Content.IsMimeMultipartContent())
                 {
                     throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
@@ -39,8 +41,15 @@ namespace BackendService.Controllers
                 foreach (var stream in filesReadToProvider.Contents)
                 {
                     var fileBytes = await stream.ReadAsStreamAsync();
+                    var filePath = stream.Headers.ContentDisposition.FileName.Trim('"','\\');
+                    var extension = Path.GetExtension(filePath);
+                    if (extension != ".doc" && extension != ".docx")
+                    {
+                        throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
+                    }
+
                     var documentService = new DocumentService();
-                    await documentService.SaveAsync(fileBytes);
+                    await documentService.SaveAsync(fileBytes, filePath, fileBytes.Length);
                 }
             }
             catch (Exception ex)

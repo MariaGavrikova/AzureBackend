@@ -46,6 +46,8 @@ namespace BackendService.Controllers
             ILog log = LogManager.GetLogger(typeof(ProductsController));
             try
             {
+                log.Info("Requested product info");
+
                 var service = new ProductService();
                 var product = service.GetProduct(id);
 
