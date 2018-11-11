@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Newtonsoft.Json;
-
 namespace BackendService.Services
 {
-    public class SearchResult
+    public class SearchResultCollection
     {
-        public string Name { get; set; }
-    }    
+        public List<SearchResult> Value { get; set; }
+    }
 }

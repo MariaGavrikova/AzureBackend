@@ -8,8 +8,9 @@ using Newtonsoft.Json;
 
 namespace BackendService.Services
 {
-    public class SearchResult
+    public class SearchParameters
     {
-        public string Name { get; set; }
-    }    
+        [JsonProperty(propertyName: "search")]
+        public string Search { get; set; }
+    }
 }

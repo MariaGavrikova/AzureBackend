@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BackendService.Services.SearchResult>
+﻿@model BackendService.Services.SearchModel
 
 @{
     ViewBag.Title = "Search";
@@ -6,17 +6,31 @@
 
 <h2>Search</h2>
 
-<form method="POST">
-    <input type="text" id="searchString" placeholder="Search..." name="searchString" />
+@using (Html.BeginForm())
+{
+    @Html.TextBoxFor(m => m.SearchString)
     <input type="submit" value="Go!" />
-</form>
-<table class="table">
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            <p>@item.Name</p>
-        </td>
-    </tr>
 }
 
-</table>
+<br/>
+
+@if (Model.Results != null)
+{
+    if (Model.Results.Any())
+    {
+        <table class="table">
+            @foreach (var item in Model.Results)
+            {
+                <tr>
+                    <td>
+                        <p>@item.Name</p>
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <p>No results</p>
+    }
+}

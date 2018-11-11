@@ -14,25 +14,21 @@ namespace BackendService.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Search Page";
-            var list = new List<SearchResult>();
-            return View(list);
+            return View(new SearchModel());
         }
 
         [HttpPost]
         public ActionResult Index(string searchString)
         {
-            var list = new List<SearchResult>();
+            var model = new SearchModel() { SearchString = searchString };
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                list.AddRange(new List<SearchResult>
-                                {
-                    new SearchResult() { Name = "Result 1" },
-                new SearchResult() { Name = "Result 2" },
-                new SearchResult() { Name = "Result 3" },
-            });
+                var searchService = new SearchService();
+                model.Results = searchService.Search(searchString);
             }
-            return View(list);
+
+            return View(model);
         }
     }
 }
