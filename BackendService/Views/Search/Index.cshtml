@@ -1,0 +1,22 @@
+﻿@model IEnumerable<BackendService.Services.SearchResult>
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search</h2>
+
+<form method="POST">
+    <input type="text" id="searchString" placeholder="Search..." name="searchString" />
+    <input type="submit" value="Go!" />
+</form>
+<table class="table">
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <p>@item.Name</p>
+        </td>
+    </tr>
+}
+
+</table>
