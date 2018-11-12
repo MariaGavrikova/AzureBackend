@@ -12,17 +12,24 @@
     <input type="submit" value="Go!" />
 }
 
-<br/>
+<br />
 
-@if (Model.Results != null)
-{
-    if (Model.Results.Any())
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Products')">Products (@Model.ProductsCount)</button>
+    <button class="tablinks" onclick="openTab(event, 'Documents')">Documents (@Model.DocumentsCount)</button>
+</div>
+
+<!-- Tab content -->
+<div id="Products" class="tabcontent">
+    @if (Model.Products != null && Model.Products.Any())
     {
         <table class="table">
-            @foreach (var item in Model.Results)
-            {
+            @foreach (BackendService.Services.ProductSearchResult item in Model.Products)
+                {
+
                 <tr>
                     <td>
+                        <p>@item.ProductNumber</p>
                         <p>@item.Name</p>
                     </td>
                 </tr>
@@ -33,4 +40,24 @@
     {
         <p>No results</p>
     }
-}
+
+</div>
+<div id="Documents" class="tabcontent">
+    @if (Model.Documents != null && Model.Documents.Any())
+    {
+        <table class="table">
+            @foreach (BackendService.Services.DocumentSearchResult item in Model.Documents)
+            {
+                <tr>
+                    <td>
+                        <p>@item.Content</p>
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <p>No results</p>
+    }
+</div>

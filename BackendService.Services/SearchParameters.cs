@@ -12,5 +12,8 @@ namespace BackendService.Services
     {
         [JsonProperty(propertyName: "search")]
         public string Search { get; set; }
+
+        [JsonProperty(propertyName: "highlight")]
+        public string Highlight { get; set; }
     }
 }

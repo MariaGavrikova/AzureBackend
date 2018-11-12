@@ -25,7 +25,8 @@ namespace BackendService.Controllers
             if (!String.IsNullOrEmpty(searchString))
             {
                 var searchService = new SearchService();
-                model.Results = searchService.Search(searchString);
+                model.Products = searchService.SearchProducts(searchString);
+                model.Documents = searchService.SearchDocuments(searchString);
             }
 
             return View(model);

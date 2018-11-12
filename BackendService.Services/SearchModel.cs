@@ -10,6 +10,12 @@ namespace BackendService.Services
     {
         public string SearchString { get; set; }
 
-        public IList<SearchResult> Results { get; set; }
+        public int ProductsCount => Products != null ? Products.Count : 0;
+
+        public IList<ProductSearchResult> Products { get; set; }
+
+        public int DocumentsCount => Documents != null ? Documents.Count : 0;
+
+        public IList<DocumentSearchResult> Documents { get; set; }
     }
 }

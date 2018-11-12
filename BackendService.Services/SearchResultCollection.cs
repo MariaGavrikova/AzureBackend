@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace BackendService.Services
 {
-    public class SearchResultCollection
+    public class SearchResultCollection<T>
+        where T : SearchResult
     {
-        public List<SearchResult> Value { get; set; }
+        public List<T> Value { get; set; }
     }
 }
