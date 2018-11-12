@@ -15,5 +15,11 @@ namespace BackendService.Services
 
         [JsonProperty(propertyName: "highlight")]
         public string Highlight { get; set; }
+
+        [JsonProperty(propertyName: "highlightPreTag")]
+        public string HighlightPreTag => @"<span style='background-color:orange;'>";
+
+        [JsonProperty(propertyName: "highlightPostTag")]
+        public string HighlightPostTag => @"</span>";
     }
 }

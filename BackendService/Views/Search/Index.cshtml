@@ -29,8 +29,8 @@
 
                 <tr>
                     <td>
-                        <p>@item.ProductNumber</p>
-                        <p>@item.Name</p>
+                        <p>@(new HtmlString(item.HightlightedProductNumber))</p>
+                        <p>@(new HtmlString(item.HightlightedName))</p>
                     </td>
                 </tr>
             }
@@ -50,7 +50,7 @@
             {
                 <tr>
                     <td>
-                        <p>@item.Content</p>
+                        <p>@(new HtmlString(item.HightlightedContent))</p>
                     </td>
                 </tr>
             }
