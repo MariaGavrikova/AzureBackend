@@ -7,7 +7,7 @@ packages
 .vs/BackendService/v15/.suo
 *.user
 BackendService/service.log
-.vs/BackendService/v15/.suo
 BackendService/App_Data/BodyPart_*
 /BackendService/*.user
-.vs/config/applicationhost.config
+.vs/*
+.vs/BackendService/v15/.suo
