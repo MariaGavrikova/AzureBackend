@@ -34,15 +34,12 @@ namespace BackendService.Services
             _queueClient = storageAccount.CreateCloudQueueClient();
         }
 
-        public async Task SaveAsync(Stream document, string fileName, long size)
+        public async Task SaveAsync(byte[] document, string fileName, long size)
         {
             var fileId = Guid.NewGuid().ToString();
             var container = _blobClient.GetContainerReference(Blob);
             var blob = container.GetBlockBlobReference(fileId);
-            using (document)
-            {
-                blob.UploadFromStreamAsync(document).GetAwaiter().GetResult();
-            }
+            await blob.UploadFromByteArrayAsync(document, 0, document.Length);
 
             var queue = _queueClient.GetQueueReference(Queue);
             queue.CreateIfNotExists();
