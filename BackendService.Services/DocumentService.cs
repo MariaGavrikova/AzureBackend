@@ -39,7 +39,10 @@ namespace BackendService.Services
             var fileId = Guid.NewGuid().ToString();
             var container = _blobClient.GetContainerReference(Blob);
             var blob = container.GetBlockBlobReference(fileId);
-            await blob.UploadFromStreamAsync(document);
+            using (document)
+            {
+                await blob.UploadFromStreamAsync(document);
+            }
 
             var queue = _queueClient.GetQueueReference(Queue);
             queue.CreateIfNotExists();

@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorks.DbModel", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendService.Services", "BackendService.Services\BackendService.Services.csproj", "{A19CB8AB-F925-45EF-A6F7-FF579DDA2FE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileFunctions", "FileFunctions\FileFunctions.csproj", "{371BF744-D30A-48D2-9619-E3F6B3303DE4}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{A19CB8AB-F925-45EF-A6F7-FF579DDA2FE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A19CB8AB-F925-45EF-A6F7-FF579DDA2FE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A19CB8AB-F925-45EF-A6F7-FF579DDA2FE1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{371BF744-D30A-48D2-9619-E3F6B3303DE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{371BF744-D30A-48D2-9619-E3F6B3303DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{371BF744-D30A-48D2-9619-E3F6B3303DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{371BF744-D30A-48D2-9619-E3F6B3303DE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
