@@ -40,7 +40,7 @@ namespace BackendService.Controllers
                 var filesReadToProvider = await Request.Content.ReadAsMultipartAsync();
                 foreach (var stream in filesReadToProvider.Contents)
                 {
-                    var fileBytes = await stream.ReadAsStreamAsync();
+                    var fileBytes = await stream.ReadAsByteArrayAsync();
                     var filePath = stream.Headers.ContentDisposition.FileName.Trim('"','\\');
                     var extension = Path.GetExtension(filePath);
                     if (extension != ".doc" && extension != ".docx")

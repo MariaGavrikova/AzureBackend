@@ -11,3 +11,4 @@ BackendService/App_Data/BodyPart_*
 /BackendService/*.user
 .vs/*
 .vs/BackendService/v15/.suo
+*.user
