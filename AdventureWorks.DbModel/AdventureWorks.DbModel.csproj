@@ -91,6 +91,7 @@
     <Compile Include="BusinessEntityContact.cs">
       <DependentUpon>AdventureWorksModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ConnectionStringBuilder.cs" />
     <Compile Include="ContactType.cs">
       <DependentUpon>AdventureWorksModel.tt</DependentUpon>
     </Compile>
@@ -112,6 +113,7 @@
     <Compile Include="EmployeePayHistory.cs">
       <DependentUpon>AdventureWorksModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities.cs" />
     <Compile Include="JobCandidate.cs">
       <DependentUpon>AdventureWorksModel.tt</DependentUpon>
     </Compile>

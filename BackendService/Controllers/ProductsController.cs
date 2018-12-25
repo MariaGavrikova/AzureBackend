@@ -7,10 +7,9 @@ using System.Web.Http;
 
 using log4net;
 
-using Microsoft.Azure.Services.AppAuthentication;
-using Microsoft.Azure.KeyVault;
-
 using BackendService.Services;
+
+using BackendService.App_Start;
 
 namespace BackendService.Controllers
 {
@@ -27,15 +26,10 @@ namespace BackendService.Controllers
             {
                 log.Info("Requested product list");
 
-                var service = new ProductService();
-                //var products = service.GetProducts();
+                var service = new ProductService(SecretValues.ConnectionString);
+                var products = service.GetProducts();
 
-                var azureServiceTokenProvider = new AzureServiceTokenProvider();
-                var keyVaultClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback));
-                var secret = keyVaultClient.GetSecretAsync("https://adventure-works-kv.vault.azure.net/secrets/ConnectionString").GetAwaiter().GetResult();
-                //ViewBag.Secret = secret.Value;
-
-                return new List<Product>() { new Product { Name = secret.Value } };
+                return products;
             }
             catch (Exception ex)
             {
@@ -56,7 +50,7 @@ namespace BackendService.Controllers
             {
                 log.Info("Requested product info");
 
-                var service = new ProductService();
+                var service = new ProductService(SecretValues.ConnectionString);
                 var product = service.GetProduct(id);
 
                 return product;
@@ -78,7 +72,7 @@ namespace BackendService.Controllers
             ILog log = LogManager.GetLogger(typeof(ProductsController));
             try
             {
-                var service = new ProductService();
+                var service = new ProductService(SecretValues.ConnectionString);
                 var newProduct = service.CreateProduct(parameters.Name);
                 return newProduct;
             }
@@ -99,7 +93,7 @@ namespace BackendService.Controllers
             ILog log = LogManager.GetLogger(typeof(ProductsController));
             try
             {
-                var service = new ProductService();
+                var service = new ProductService(SecretValues.ConnectionString);
                 service.UpdateProduct(id, parameters.Name);
             }
             catch (Exception ex)
@@ -118,7 +112,7 @@ namespace BackendService.Controllers
             ILog log = LogManager.GetLogger(typeof(ProductsController));
             try
             {
-                var service = new ProductService();
+                var service = new ProductService(SecretValues.ConnectionString);
                 service.DeleteProduct(id);
             }
             catch (Exception ex)

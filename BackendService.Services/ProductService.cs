@@ -6,8 +6,12 @@ namespace BackendService.Services
 {
     public class ProductService
     {
-        private readonly AdventureWorks.DbModel.Entities _entities =
-            new AdventureWorks.DbModel.Entities();
+        private readonly AdventureWorks.DbModel.Entities _entities;
+
+        public ProductService(string connectionString)
+        {
+            _entities = new AdventureWorks.DbModel.Entities(connectionString);
+        }
 
         public ICollection<Product> GetProducts()
         {
@@ -18,7 +22,7 @@ namespace BackendService.Services
                             Name = d.Name,
                         };
 
-            return query.ToArray();
+            return query.Take(10).ToArray();
         }
 
         public Product GetProduct(int id)
