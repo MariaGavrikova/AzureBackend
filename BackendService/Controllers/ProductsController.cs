@@ -7,6 +7,9 @@ using System.Web.Http;
 
 using log4net;
 
+using Microsoft.Azure.Services.AppAuthentication;
+using Microsoft.Azure.KeyVault;
+
 using BackendService.Services;
 
 namespace BackendService.Controllers
@@ -25,9 +28,14 @@ namespace BackendService.Controllers
                 log.Info("Requested product list");
 
                 var service = new ProductService();
-                var products = service.GetProducts();
-                
-                return products;
+                //var products = service.GetProducts();
+
+                var azureServiceTokenProvider = new AzureServiceTokenProvider();
+                var keyVaultClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback));
+                var secret = keyVaultClient.GetSecretAsync("https://adventure-works-kv.vault.azure.net/secrets/ConnectionString").GetAwaiter().GetResult();
+                //ViewBag.Secret = secret.Value;
+
+                return new List<Product>() { new Product { Name = secret.Value } };
             }
             catch (Exception ex)
             {
